@@ -10,11 +10,9 @@ pip install -U pip setuptools
 
 
 echo "========================================================================="
-echo "Installing homebrew - postgres, heroku"
+echo "Installing homebrew -> heroku"
 echo "========================================================================="
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install postgres
-brew services start postgres
 brew install heroku
 
 
