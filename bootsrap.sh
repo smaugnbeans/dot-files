@@ -29,3 +29,6 @@ echo "========================================================================="
 cd ~/Documents/CSC/
 git clone https://github.com/smaugnbeans/dot-files
 cd ~/Documents/CSC/dot-files
+chmod +x setup.sh
+./setup.sh
+
