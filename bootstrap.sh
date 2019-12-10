@@ -4,16 +4,20 @@ echo "========================================================================="
 
 
 echo "========================================================================="
-echo "Installing pip"
-echo "========================================================================="
-pip install -U pip setuptools
-
-
-echo "========================================================================="
 echo "Installing homebrew -> heroku"
 echo "========================================================================="
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install heroku
+
+echo "Installing heroku"
+echo "========================================================================="
+brew tap heroku/brew && brew install heroku
+
+echo "Installing pyenv and python"
+echo "========================================================================="
+brew install pyenv
+echo "*************************************************************************"
+echo "TODO: manage python versions with pyenv"
+echo "*************************************************************************"
 
 
 echo "========================================================================="
@@ -26,9 +30,8 @@ apt --yes install git
 echo "========================================================================="
 echo "Pulling repo and running setup..."
 echo "========================================================================="
-cd ~/Documents/CSC/
+cd ~/Documents/admin/
 git clone https://github.com/smaugnbeans/dot-files
-cd ~/Documents/CSC/dot-files
+cd ~/Documents/admin/dot-files
 chmod +x setup.sh
 ./setup.sh
-
